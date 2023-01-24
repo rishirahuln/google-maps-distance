@@ -57,25 +57,25 @@ function App() {
           )}
         </GoogleMap>
       </Box>
-      <Box minW="container.md" zIndex="1" bg="white" boxShadow="md" rounded="lg" mt="20px" p="20px">
+      <Box maxW={{base: "90%", md: "50%"}} zIndex="1" bg="white" boxShadow="md" rounded="lg" mt={{base: "55px", md: "20px"}} p="20px">
         <HStack spacing="10px" justifyContent="space-between">
           <Autocomplete>
-            <Input type="text" placeholder="Origin" ref={originRef} />
+            <Input type="text" size={{base: "xs", md: "sm"}} placeholder="Origin" ref={originRef} />
           </Autocomplete>
 
           <Autocomplete>
-            <Input type="text" placeholder="Destination" ref={destinationRef} />
+            <Input type="text" size={{base: "xs", md: "sm"}} placeholder="Destination" ref={destinationRef} />
           </Autocomplete>
 
           <ButtonGroup>
-            <Button type="submit" colorScheme="blue" onClick={calculateData}>Calculate</Button>
-            <Button type="button" colorScheme="red" onClick={clearData}>Clear</Button>
+            <Button type="submit" colorScheme="blue" size={{base: "xs", md: "sm"}} onClick={calculateData}>Calculate</Button>
+            <Button type="button" colorScheme="red" size={{base: "xs", md: "sm"}} onClick={clearData}>Clear</Button>
           </ButtonGroup>
         </HStack>
         <HStack spacing="10px" justifyContent="space-between" mt="10px">
-          <Text>Distance: {distance}</Text>
-          <Text>Duration: {duration}</Text>
-          <Button type="button" colorScheme="yellow" onClick={() => map.panTo(center)}>Re-center</Button>
+          <Text fontSize={{base: "xs", md: "sm"}}>Distance: {distance}</Text>
+          <Text fontSize={{base: "xs", md: "sm"}}>Duration: {duration}</Text>
+          <Button type="button" colorScheme="yellow" size={{base: "xs", md: "sm"}} onClick={() => map.panTo(center)}>Re-center</Button>
         </HStack>
       </Box>
     </Flex>
