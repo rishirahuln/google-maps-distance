@@ -57,8 +57,8 @@ function App() {
           )}
         </GoogleMap>
       </Box>
-      <Box maxW={{base: "90%", md: "50%"}} zIndex="1" bg="white" boxShadow="md" rounded="lg" mt={{base: "55px", md: "20px"}} p="20px">
-        <HStack spacing="10px" justifyContent="space-between">
+      <Box maxW={{base: "90%", md: "50%"}} zIndex="1" bg="white" boxShadow="md" rounded="lg" mt={{base: "95px", md: "20px"}} p="20px">
+        <HStack spacing="5px" justifyContent="space-between">
           <Autocomplete>
             <Input type="text" size={{base: "xs", md: "sm"}} placeholder="Origin" ref={originRef} />
           </Autocomplete>
